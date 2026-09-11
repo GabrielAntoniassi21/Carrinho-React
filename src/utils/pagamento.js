@@ -9,4 +9,16 @@ function todosDigitosIguais(numeroCartao) {
   );
 }
 
+export function processarPagamento(numeroCartao) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      if (todosDigitosIguais(numeroCartao)) {
+        reject(new Error("Pagamento recusado"));
+      } else {
+        resolve("Pagamento aprovado");
+      }
+    }, 2000);
+  });
+}
+
 export default todosDigitosIguais;

@@ -19,6 +19,8 @@ function Carrinho() {
 
       <ResumoCompra total={total} />
 
+      <Link to="/pagamento">Finalizar compra</Link>
+
       <h2>Total: R$ {total.toFixed(2)}</h2>
     </main>
   );

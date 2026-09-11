@@ -1,5 +1,7 @@
 import produtos from "../data/produtos";
-
+import ItemCarrinho from "../components/ItemCarrinho";
+import ResumoCompra from "../components/ResumoCompra";
+import { Link } from "react-router-dom";
 
 function Carrinho() {
   const total = produtos.reduce(
@@ -11,21 +13,11 @@ function Carrinho() {
     <main>
       <h1>Meu Carrinho</h1>
 
-      {produtos.map((produto) => {
-        const subtotal = produto.preco * produto.quantidade;
+      {produtos.map((produto) => (
+        <ItemCarrinho key={produto.id} produto={produto} />
+        ))}
 
-        return (
-          <div key={produto.id}>
-            <h2>{produto.nome}</h2>
-
-            <p>Preço unitário: R$ {produto.preco.toFixed(2)}</p>
-
-            <p>Quantidade: {produto.quantidade}</p>
-
-            <p>Subtotal: R$ {subtotal.toFixed(2)}</p>
-          </div>
-        );
-      })}
+      <ResumoCompra total={total} />
 
       <h2>Total: R$ {total.toFixed(2)}</h2>
     </main>

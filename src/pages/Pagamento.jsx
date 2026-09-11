@@ -2,6 +2,7 @@ import produtos from "../data/produtos";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
+import todosDigitosIguais from "../utils/pagamento";
 
 const esquemaPagamento = z.object({
   titular: z
@@ -49,7 +50,12 @@ const {
 });
 
 function enviarPagamento(dados) {
-  console.log(dados);
+  const cartaoSuspeito = todosDigitosIguais(dados.numeroCartao);
+
+  console.log({
+    ...dados,
+    cartaoSuspeito,
+  });
 }
 
   return (

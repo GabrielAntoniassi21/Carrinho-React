@@ -1,4 +1,16 @@
 import produtos from "../data/produtos";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { z } from "zod";
+
+const esquemaPagamento = z.object({
+  titular: z.string(),
+  numeroCartao: z.string(),
+  validade: z.string(),
+  cvv: z.string(),
+});
+
+
 
 function Pagamento() {
 
@@ -6,6 +18,14 @@ const total = produtos.reduce(
   (soma, produto) => soma + produto.preco * produto.quantidade,
   0
 );
+
+const { register, handleSubmit } = useForm({
+  resolver: zodResolver(esquemaPagamento),
+});
+
+function enviarPagamento(dados) {
+  console.log(dados);
+}
 
   return (
     <main>
@@ -19,13 +39,14 @@ const total = produtos.reduce(
         })}
       </p>
 
-      <form>
+      <form onSubmit={handleSubmit(enviarPagamento)}>
         <div>
             <label htmlFor="titular">Titular do cartão</label>
                 <input
                 id="titular"
                 name="titular"
                 type="text"
+                {...register("titular")}
                 />
         </div>
         <div>
@@ -34,6 +55,7 @@ const total = produtos.reduce(
                 id="numeroCartao"
                 name="numeroCartao"
                 type="text"
+                {...register("numeroCartao")}
                 />
         </div>
         <div>
@@ -43,6 +65,7 @@ const total = produtos.reduce(
                 name="validade"
                 type="text"
                 placeholder="MM/AA"
+                {...register("validade")}
                 />
         </div>
         <div>
@@ -51,6 +74,7 @@ const total = produtos.reduce(
                 id="cvv"
                 name="cvv"
                 type="text"
+                {...register("cvv")}
                 />
         </div>
         <button type="submit">

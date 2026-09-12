@@ -1,8 +1,13 @@
+import { Link } from "react-router-dom";
+
 function Falha() {
   return (
     <main>
-      <h1>Falha no pagamento</h1>
-      <p>tentativa de golpe</p>
+      <h1>Pagamento não autorizado</h1>
+
+      <p>Não foi possível possível concluir sua compra.</p>
+
+      <Link to="/pagamento">Tentar novamente</Link>
     </main>
   );
 }

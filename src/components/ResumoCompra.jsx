@@ -1,8 +1,8 @@
 function ResumoCompra({ total }) {
   return (
-    <div>
+    <section className="resumo-compra">
       <h2>Total: R$ {total.toFixed(2)}</h2>
-    </div>
+    </section>
   );
 }
 

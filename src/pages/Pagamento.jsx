@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import usePagamento from "../hooks/usePagamento";
+import { useNavigate } from "react-router-dom";
 
 const esquemaPagamento = z.object({
   titular: z
@@ -35,6 +36,7 @@ const esquemaPagamento = z.object({
 
 
 function Pagamento() {
+const navigate = useNavigate();
 const { processando, realizarPagamento } = usePagamento();
 
 
@@ -57,9 +59,9 @@ async function enviarPagamento(dados) {
   );
 
   if (pagamentoAprovado) {
-    console.log("Pagamento aprovado");
+    navigate("/sucesso");
   } else {
-    console.log("Pagamento recusado");
+    navigate("/falha");
   }
 }
 

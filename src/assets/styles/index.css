@@ -1,0 +1,148 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: #f3f4f6;
+  color: #1f2937;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+  width: min(90%, 760px);
+  margin: 40px auto;
+  padding: 32px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  margin-top: 0;
+  text-align: center;
+  color: #111827;
+}
+
+.lista-produtos {
+  display: grid;
+  gap: 16px;
+}
+
+.item-carrinho {
+  padding: 20px;
+  background-color: #f9fafb;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+}
+
+.item-carrinho h2 {
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+.item-carrinho p {
+  margin: 7px 0;
+}
+
+.subtotal {
+  font-weight: bold;
+  color: #2563eb;
+}
+
+.resumo-compra {
+  margin: 24px 0;
+  padding: 16px;
+  text-align: right;
+  background-color: #e5e7eb;
+  border-radius: 8px;
+}
+
+.resumo-compra h2 {
+  margin: 0;
+}
+
+.botao-principal,
+button {
+  display: block;
+  width: 100%;
+  padding: 14px 20px;
+  color: #ffffff;
+  background-color: #2563eb;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.botao-principal:hover,
+button:hover:not(:disabled) {
+  background-color: #1d4ed8;
+}
+
+button:disabled {
+  background-color: #93c5fd;
+  cursor: not-allowed;
+}
+
+form {
+  display: grid;
+  gap: 18px;
+}
+
+form div {
+  display: grid;
+  gap: 7px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #9ca3af;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+input:focus {
+  border-color: #2563eb;
+  outline: 2px solid rgba(37, 99, 235, 0.2);
+}
+
+input[aria-invalid="true"] {
+  border-color: #dc2626;
+}
+
+p[role="alert"] {
+  margin: 0;
+  color: #dc2626;
+  font-size: 14px;
+}
+
+main > a:not(.botao-principal) {
+  display: inline-block;
+  margin-top: 16px;
+  color: #2563eb;
+  font-weight: bold;
+}
+
+@media (max-width: 600px) {
+  main {
+    width: calc(100% - 24px);
+    margin: 20px auto;
+    padding: 20px;
+  }
+
+  .resumo-compra {
+    text-align: center;
+  }
+}

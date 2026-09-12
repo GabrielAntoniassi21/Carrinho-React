@@ -1,16 +1,97 @@
-# React + Vite
+# Carrinho de Compras em React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Mini-projeto desenvolvido para simular o fluxo de um carrinho de compras e o processamento de pagamento.
 
-Currently, two official plugins are available:
+## Funcionalidades
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Exibição dos produtos do carrinho
+- Cálculo do subtotal de cada produto
+- Cálculo do valor total da compra
+- Navegação entre páginas com React Router
+- Formulário desenvolvido com React Hook Form
+- Validação dos campos com Zod
+- Exibição de mensagens de erro
+- Validação do número do cartão, validade e CVV
+- Identificação de cartões com todos os dígitos iguais
+- Processamento assíncrono do pagamento
+- Bloqueio do botão durante o processamento
+- Páginas de pagamento aprovado e recusado
+- Layout responsivo
 
-## React Compiler
+## Tecnologias utilizadas
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React
+- Vite
+- JavaScript
+- React Router
+- React Hook Form
+- Zod
+- CSS
+- Git e GitHub
 
-## Expanding the ESLint configuration
+## Fluxo da aplicação
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. O usuário visualiza os produtos no carrinho.
+2. A aplicação calcula o total da compra.
+3. O usuário acessa a página de pagamento.
+4. O formulário valida os dados informados.
+5. O pagamento é processado de forma assíncrona.
+6. Um cartão com todos os dígitos iguais é recusado.
+7. Um cartão normal direciona para a página de sucesso.
+
+## Como executar o projeto
+
+Clone o repositório:
+
+```bash
+git clone https://github.com/GabrielAntoniassi21/Carrinho-React.git
+```
+
+Entre na pasta do projeto:
+
+```bash
+cd Carrinho-React
+```
+
+Instale as dependências:
+
+```bash
+npm install
+```
+
+Execute o projeto:
+
+```bash
+npm run dev
+```
+
+Depois, abra no navegador o endereço mostrado pelo Vite.
+
+## Estrutura principal
+
+```text
+src/
+├── assets/
+│   └── styles/
+│       └── index.css
+├── components/
+│   ├── ItemCarrinho.jsx
+│   └── ResumoCompra.jsx
+├── data/
+│   └── produtos.js
+├── hooks/
+│   └── usePagamento.js
+├── pages/
+│   ├── Carrinho.jsx
+│   ├── Pagamento.jsx
+│   ├── Sucesso.jsx
+│   └── Falha.jsx
+├── utils/
+│   └── pagamento.js
+├── App.jsx
+└── main.jsx
+```
+
+## Autor
+
+Gabriel Antoniassi

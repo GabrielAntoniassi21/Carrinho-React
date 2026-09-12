@@ -10,18 +10,20 @@ function Carrinho() {
   );
 
   return (
-    <main>
+    <main className="pagina-carrinho">
       <h1>Meu Carrinho</h1>
 
-      {produtos.map((produto) => (
-        <ItemCarrinho key={produto.id} produto={produto} />
+      <section className="lista-produtos">
+        {produtos.map((produto) => (
+          <ItemCarrinho key={produto.id} produto={produto} />
         ))}
+      </section>
 
       <ResumoCompra total={total} />
 
-      <Link to="/pagamento">Finalizar compra</Link>
-
-      <h2>Total: R$ {total.toFixed(2)}</h2>
+      <Link className="botao-principal" to="/pagamento">
+        Finalizar compra
+      </Link>
     </main>
   );
 }

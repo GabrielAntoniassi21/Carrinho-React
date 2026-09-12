@@ -2,7 +2,7 @@ import produtos from "../data/produtos";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import { processarPagamento } from "../utils/pagamento";
+import usePagamento from "../hooks/usePagamento";
 
 const esquemaPagamento = z.object({
   titular: z
@@ -35,6 +35,8 @@ const esquemaPagamento = z.object({
 
 
 function Pagamento() {
+const { processando, realizarPagamento } = usePagamento();
+
 
 const total = produtos.reduce(
   (soma, produto) => soma + produto.preco * produto.quantidade,
@@ -50,11 +52,14 @@ const {
 });
 
 async function enviarPagamento(dados) {
-  try {
-    const resultado = await processarPagamento(dados.numeroCartao);
-    console.log(resultado);
-  } catch (erro) {
-    console.error(erro.message);
+  const pagamentoAprovado = await realizarPagamento(
+    dados.numeroCartao
+  );
+
+  if (pagamentoAprovado) {
+    console.log("Pagamento aprovado");
+  } else {
+    console.log("Pagamento recusado");
   }
 }
 
@@ -134,8 +139,8 @@ async function enviarPagamento(dados) {
                     </p>
 )}
         </div>
-        <button type="submit">
-            Finalizar compra
+        <button type="submit" disabled={processando}>
+          {processando ? "Processando compra..." : "Finalizar compra"}
         </button>
       </form>
     </main>

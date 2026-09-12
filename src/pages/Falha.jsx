@@ -5,7 +5,7 @@ function Falha() {
     <main>
       <h1>Pagamento não autorizado</h1>
 
-      <p>Não foi possível possível concluir sua compra.</p>
+      <p>Não foi possível concluir sua compra.</p>
 
       <Link to="/pagamento">Tentar novamente</Link>
     </main>

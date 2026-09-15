@@ -39,6 +39,20 @@ Mini-projeto desenvolvido para simular o fluxo de um carrinho de compras e o pro
 6. Um cartão com todos os dígitos iguais é recusado.
 7. Um cartão normal direciona para a página de sucesso.
 
+## Depuração
+
+Durante o desenvolvimento, utilizei o console e as ferramentas de desenvolvedor do navegador para investigar um erro de uso de hooks. O erro ocorreu porque o `useForm` havia sido chamado fora do componente `Pagamento`. Após analisar a mensagem `Invalid hook call`, movi o hook para o nível superior do componente, respeitando as regras dos hooks do React.
+
+## Organização das tarefas
+
+As tarefas do projeto foram organizadas em um quadro do Trello:
+
+[Visualizar quadro no Trello](https://trello.com/invite/b/6aa4d55d50ef566b89403ce2/ATTI4f673d1775a38654a69559d3cd32c3934B33B2D1/carrinho-react)
+
+## Vídeo de apresentação
+
+[Assistir à apresentação do projeto](https://drive.google.com/file/d/1jQCzHd-5f7aJNdHZupyqOTD9-xaYX1m1/view?usp=sharing)
+
 ## Como executar o projeto
 
 Clone o repositório:
@@ -91,6 +105,14 @@ src/
 ├── App.jsx
 └── main.jsx
 ```
+
+## Melhorias futuras
+
+- Permitir alteração das quantidades dos produtos
+- Permitir remoção de itens do carrinho
+- Aplicar máscaras nos campos do cartão
+- Adicionar testes automatizados
+- Melhorar a identidade visual da loja
 
 ## Autor
 

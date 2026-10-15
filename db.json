@@ -1,0 +1,112 @@
+{
+  "produtos": [
+    {
+      "id": 1,
+      "nome": "Camiseta Básica",
+      "descricao": "Camiseta de algodão confortável para o dia a dia.",
+      "preco": 59.90,
+      "categoria": "Roupas",
+      "imagem": "https://placehold.co/600x400?text=Camiseta",
+      "estoque": 10
+    },
+    {
+      "id": 2,
+      "nome": "Calça Jeans",
+      "descricao": "Calça jeans versátil para diferentes ocasiões.",
+      "preco": 129.90,
+      "categoria": "Roupas",
+      "imagem": "https://placehold.co/600x400?text=Calca+Jeans",
+      "estoque": 8
+    },
+    {
+      "id": 3,
+      "nome": "Tênis Casual",
+      "descricao": "Tênis casual confortável para passeios e uso diário.",
+      "preco": 199.90,
+      "categoria": "Calçados",
+      "imagem": "https://placehold.co/600x400?text=Tenis",
+      "estoque": 5
+    },
+    {
+      "id": 4,
+      "nome": "Mochila Urbana",
+      "descricao": "Mochila espaçosa para estudos e trabalho.",
+      "preco": 149.90,
+      "categoria": "Acessórios",
+      "imagem": "https://placehold.co/600x400?text=Mochila",
+      "estoque": 6
+    },
+    {
+      "id": 5,
+      "nome": "Boné Esportivo",
+      "descricao": "Boné ajustável para atividades ao ar livre.",
+      "preco": 49.90,
+      "categoria": "Acessórios",
+      "imagem": "https://placehold.co/600x400?text=Bone",
+      "estoque": 12
+    },
+    {
+      "id": 6,
+      "nome": "Sandália Casual",
+      "descricao": "Sandália leve para momentos de descanso.",
+      "preco": 69.90,
+      "categoria": "Calçados",
+      "imagem": "https://placehold.co/600x400?text=Sandalia",
+      "estoque": 7
+    },
+    {
+      "id": 7,
+      "nome": "Jaqueta Jeans",
+      "descricao": "Jaqueta jeans para compor looks em dias frios.",
+      "preco": 189.90,
+      "categoria": "Roupas",
+      "imagem": "https://placehold.co/600x400?text=Jaqueta",
+      "estoque": 4
+    },
+    {
+      "id": 8,
+      "nome": "Carteira Masculina",
+      "descricao": "Carteira compacta com espaço para cartões e documentos.",
+      "preco": 39.90,
+      "categoria": "Acessórios",
+      "imagem": "https://placehold.co/600x400?text=Carteira",
+      "estoque": 15
+    },
+    {
+      "id": 9,
+      "nome": "Tênis Esportivo",
+      "descricao": "Tênis indicado para caminhadas e exercícios leves.",
+      "preco": 249.90,
+      "categoria": "Calçados",
+      "imagem": "https://placehold.co/600x400?text=Tenis+Esportivo",
+      "estoque": 3
+    },
+    {
+      "id": 10,
+      "nome": "Moletom Básico",
+      "descricao": "Moletom macio para dias de temperatura amena.",
+      "preco": 119.90,
+      "categoria": "Roupas",
+      "imagem": "https://placehold.co/600x400?text=Moletom",
+      "estoque": 9
+    },
+    {
+      "id": 11,
+      "nome": "Óculos de Sol",
+      "descricao": "Óculos de sol com design moderno para o dia a dia.",
+      "preco": 89.90,
+      "categoria": "Acessórios",
+      "imagem": "https://placehold.co/600x400?text=Oculos",
+      "estoque": 0
+    },
+    {
+      "id": 12,
+      "nome": "Bota Casual",
+      "descricao": "Bota casual para compor diferentes estilos.",
+      "preco": 219.90,
+      "categoria": "Calçados",
+      "imagem": "https://placehold.co/600x400?text=Bota",
+      "estoque": 2
+    }
+  ]
+}

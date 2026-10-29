@@ -1,29 +1,71 @@
-import produtos from "../data/produtos";
+
+import { Link } from "react-router-dom";
 import ItemCarrinho from "../components/ItemCarrinho";
 import ResumoCompra from "../components/ResumoCompra";
-import { Link } from "react-router-dom";
 
-function Carrinho() {
-  const total = produtos.reduce(
-    (soma, produto) => soma + produto.preco * produto.quantidade,
-    0
-  );
-
+function Carrinho({
+  itens,
+  alterarQuantidade,
+  removerProduto,
+  quantidadeTotal,
+  valorTotal,
+}) {
   return (
     <main className="pagina-carrinho">
       <h1>Meu Carrinho</h1>
 
-      <section className="lista-produtos">
-        {produtos.map((produto) => (
-          <ItemCarrinho key={produto.id} produto={produto} />
-        ))}
-      </section>
+      {itens.length === 0 ? (
+        <section>
+          <p>Seu carrinho está vazio.</p>
+          <Link className="botao-principal" to="/produtos">
+            Ver produtos
+          </Link>
+        </section>
+      ) : (
+        <>
+          <Link className="botao-principal" to="/produtos">
+            Continuar comprando
+          </Link>
 
-      <ResumoCompra total={total} />
+          <p>Quantidade de itens: {quantidadeTotal}</p>
 
-      <Link className="botao-principal" to="/pagamento">
-        Finalizar compra
-      </Link>
+          <section className="lista-produtos">
+            {itens.map((produto) => (
+              <div key={produto.id}>
+                <ItemCarrinho produto={produto} />
+
+                <label htmlFor={`quantidade-${produto.id}`}>
+                  Quantidade de {produto.nome}
+                </label>
+
+                <input
+                  id={`quantidade-${produto.id}`}
+                  type="number"
+                  min="1"
+                  max={produto.estoque}
+                  value={produto.quantidade}
+                  onChange={(evento) =>
+                    alterarQuantidade(produto.id, evento.target.value)
+                  }
+                />
+
+                <button
+                  type="button"
+                  onClick={() => removerProduto(produto.id)}
+                >
+                  Remover
+                </button>
+              </div>
+            ))}
+          </section>
+
+          <ResumoCompra total={valorTotal} />
+
+          <Link className="botao-principal" to="/pagamento">
+            Finalizar compra
+          </Link>
+        </>
+      )}
     </main>
   );
 }

@@ -120,7 +120,7 @@ O acompanhamento das atividades foi realizado por meio do Trello.
 
 O projeto utiliza Git e GitHub para acompanhar a evolução do desenvolvimento, com branches destinadas à organização das funcionalidades e commits com descrições das alterações realizadas.
 
-**Repositório:** [Carrinho-React no GitHub](https://github.com/GabrielAntoniassi21/Carrinho-React)
+**Repositório:** [Carrinho-React no GitHub](https://github.com/GabrielAntoniassi21/Carrinho-React.git)
 
 O histórico de branches e commits pode ser consultado diretamente no repositório.
 
@@ -137,7 +137,7 @@ Algumas melhorias que poderiam ser implementadas em versões futuras:
 
 ## 🎥 Vídeo de apresentação
 
-**Vídeo demonstrativo:** [Assistir à apresentação do projeto](https://drive.google.com/file/d/1jQCzHd-5f7aJNdHZupyqOTD9-xaYX1m1/view?usp=sharing)
+**Vídeo demonstrativo:** [Assistir à apresentação do projeto](https://drive.google.com/file/d/1Se8dGksAD04NH_GnTx3gz-3PJB6lISyR/view?usp=sharing)
 
 O vídeo deverá apresentar o objetivo do sistema, seu funcionamento, os comandos necessários para executá-lo, a organização das tarefas, as branches utilizadas e possíveis melhorias para o projeto.
 
